@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  login:
+    container_name: facility-services
+    image: coderbillzay/admin-facility
+    ports:
+      - '28645:28645'
+    volumes:
+      - ./:/server
+      - /var/www/html/facility_images:/facility_images
+      - /var/www/html/icon:/icon
+    restart: always
